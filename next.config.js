@@ -6,9 +6,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.GITHUB_ACTIONS === 'true'
-    ? `/${process.env.GITHUB_REPOSITORY?.split('/')[1] || ''}`
-    : '',
   compiler: {
     styledComponents: false,
   },
