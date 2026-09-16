@@ -12,12 +12,24 @@ export default function ContactPage() {
           text-align: center;
         }
 
+        @media (max-width: 768px) {
+          .contact-hero {
+            padding: 5rem 0 3.5rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .contact-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .contact-badge {
           margin-bottom: 24px;
         }
 
         .contact-hero h1 {
-          font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+          font-size: clamp(2rem, 5.5vw, 4.2rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 24px;
@@ -26,7 +38,7 @@ export default function ContactPage() {
         }
 
         .contact-hero p {
-          font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+          font-size: clamp(1rem, 2.2vw, 1.35rem);
           color: var(--color-medium-grey);
           max-width: 680px;
           margin: 0 auto;
@@ -35,6 +47,12 @@ export default function ContactPage() {
 
         .contact-section {
           padding: 3rem 0 8rem;
+        }
+
+        @media (max-width: 576px) {
+          .contact-section {
+            padding: 2rem 0 4rem;
+          }
         }
 
         .connect-container {
@@ -61,6 +79,12 @@ export default function ContactPage() {
           transition: all var(--transition-normal);
         }
 
+        @media (max-width: 576px) {
+          .connect-card {
+            padding: 24px 18px;
+          }
+        }
+
         .connect-card:hover {
           border-color: var(--color-card-border-hover);
           transform: translateY(-3px);
@@ -78,7 +102,7 @@ export default function ContactPage() {
         }
 
         .connect-value {
-          font-size: 1.2rem;
+          font-size: clamp(1rem, 4.5vw, 1.2rem);
           font-weight: 600;
           color: var(--color-white);
           text-decoration: none;
@@ -86,6 +110,9 @@ export default function ContactPage() {
           display: inline-flex;
           align-items: center;
           gap: 8px;
+          overflow-wrap: anywhere;
+          word-break: break-word;
+          max-width: 100%;
         }
 
         .connect-value:hover {

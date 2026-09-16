@@ -88,15 +88,21 @@ export default function PricingPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .pricing-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .pricing-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 18px;
         }
 
         .pricing-hero p {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 680px;
           margin: 0 auto 32px;
@@ -118,6 +124,7 @@ export default function PricingPage() {
         @media (max-width: 640px) {
           .plans-grid {
             grid-template-columns: 1fr;
+            gap: 24px;
           }
         }
 
@@ -130,6 +137,12 @@ export default function PricingPage() {
           flex-direction: column;
           position: relative;
           transition: all var(--transition-normal);
+        }
+
+        @media (max-width: 576px) {
+          .plan-card {
+            padding: 24px 18px;
+          }
         }
 
         .plan-card.highlight {
@@ -151,6 +164,7 @@ export default function PricingPage() {
           border-radius: 12px;
           text-transform: uppercase;
           letter-spacing: 0.05em;
+          white-space: nowrap;
         }
 
         .plan-name {
@@ -167,7 +181,7 @@ export default function PricingPage() {
         }
 
         .plan-price {
-          font-size: 2.5rem;
+          font-size: clamp(2rem, 4vw, 2.5rem);
           font-weight: 700;
           color: var(--color-white);
           font-family: var(--font-family-display);
@@ -193,6 +207,12 @@ export default function PricingPage() {
           min-height: 52px;
         }
 
+        @media (max-width: 640px) {
+          .plan-desc {
+            min-height: auto;
+          }
+        }
+
         .plan-features {
           list-style: none;
           padding: 0;
@@ -213,6 +233,7 @@ export default function PricingPage() {
         .plan-features li i {
           color: var(--color-gold);
           font-size: 0.8rem;
+          flex-shrink: 0;
         }
 
         /* Credit Packs Section */
@@ -220,6 +241,12 @@ export default function PricingPage() {
           background-color: var(--color-dark-grey);
           padding: 5rem 0;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 576px) {
+          .credit-packs-section {
+            padding: 3.5rem 0;
+          }
         }
 
         .packs-grid {
@@ -233,6 +260,7 @@ export default function PricingPage() {
         @media (max-width: 768px) {
           .packs-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
           }
         }
 
@@ -242,6 +270,12 @@ export default function PricingPage() {
           border-radius: var(--border-radius-lg);
           padding: 28px;
           text-align: center;
+        }
+
+        @media (max-width: 576px) {
+          .pack-card {
+            padding: 20px 16px;
+          }
         }
 
         .pack-credits {

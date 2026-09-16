@@ -141,15 +141,25 @@ export default function FeaturesPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .features-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+
+          .features-hero :global(.btn) {
+            width: 100%;
+          }
+        }
+
         .features-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 18px;
         }
 
         .features-hero p {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 680px;
           margin: 0 auto 32px;
@@ -157,6 +167,12 @@ export default function FeaturesPage() {
 
         .category-block {
           margin-bottom: 4rem;
+        }
+
+        @media (max-width: 576px) {
+          .category-block {
+            margin-bottom: 2.5rem;
+          }
         }
 
         .category-block:last-child {
@@ -172,6 +188,13 @@ export default function FeaturesPage() {
           border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
+        @media (max-width: 576px) {
+          .category-header {
+            gap: 10px;
+            margin-bottom: 1.2rem;
+          }
+        }
+
         .category-icon {
           width: 40px;
           height: 40px;
@@ -182,10 +205,19 @@ export default function FeaturesPage() {
           align-items: center;
           justify-content: center;
           font-size: 1.1rem;
+          flex-shrink: 0;
+        }
+
+        @media (max-width: 576px) {
+          .category-icon {
+            width: 36px;
+            height: 36px;
+            font-size: 1rem;
+          }
         }
 
         .category-title {
-          font-size: 1.6rem;
+          font-size: clamp(1.3rem, 3vw, 1.6rem);
           color: var(--color-white);
         }
 
@@ -204,6 +236,7 @@ export default function FeaturesPage() {
         @media (max-width: 576px) {
           .items-grid {
             grid-template-columns: 1fr;
+            gap: 14px;
           }
         }
 
@@ -212,6 +245,16 @@ export default function FeaturesPage() {
           padding: 4.5rem 0;
           background: var(--color-dark-grey);
           border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        @media (max-width: 576px) {
+          .cta-footer {
+            padding: 3.5rem 0;
+          }
+
+          .cta-footer :global(.btn) {
+            width: 100%;
+          }
         }
       `}</style>
 

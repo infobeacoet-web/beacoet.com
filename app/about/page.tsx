@@ -13,8 +13,20 @@ export default function AboutPage() {
           text-align: center;
         }
 
+        @media (max-width: 768px) {
+          .about-hero {
+            padding: 4.5rem 0 3.5rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .about-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .about-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 20px;
@@ -25,7 +37,7 @@ export default function AboutPage() {
         }
 
         .about-hero p {
-          font-size: 1.2rem;
+          font-size: clamp(1rem, 2vw, 1.2rem);
           color: var(--color-medium-grey);
           max-width: 680px;
           margin: 0 auto;
@@ -39,6 +51,12 @@ export default function AboutPage() {
 
         .story-block {
           margin-bottom: 4rem;
+        }
+
+        @media (max-width: 576px) {
+          .story-block {
+            margin-bottom: 2.5rem;
+          }
         }
 
         .story-block:last-child {
@@ -56,14 +74,14 @@ export default function AboutPage() {
         }
 
         .story-block h2 {
-          font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+          font-size: clamp(1.4rem, 2.6vw, 2.2rem);
           color: var(--color-white);
           margin-bottom: 18px;
           line-height: 1.3;
         }
 
         .story-block p {
-          font-size: 1.1rem;
+          font-size: clamp(0.98rem, 2vw, 1.1rem);
           color: var(--color-medium-grey);
           line-height: 1.75;
           margin-bottom: 18px;
@@ -73,27 +91,30 @@ export default function AboutPage() {
           color: var(--color-light-grey);
         }
 
-        /* Journey Minimal Row */
+        /* Journey Minimal Grid */
         .journey-row {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
           gap: 16px;
           margin: 28px 0;
-          flex-wrap: wrap;
+        }
+
+        @media (max-width: 640px) {
+          .journey-row {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+          }
         }
 
         .journey-step {
-          padding: 16px 24px;
+          padding: 14px 16px;
           background: rgba(255, 255, 255, 0.02);
           border: 1px solid var(--color-card-border);
           border-radius: var(--border-radius-md);
           color: var(--color-white);
-          font-size: 1.05rem;
+          font-size: clamp(0.95rem, 2vw, 1.05rem);
           font-weight: 600;
           font-family: var(--font-family-display);
-          flex: 1;
-          min-width: 130px;
           text-align: center;
           transition: border-color var(--transition-fast);
         }
@@ -111,8 +132,15 @@ export default function AboutPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .status-box {
+            padding: 18px 16px;
+            margin-top: 24px;
+          }
+        }
+
         .status-text {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-gold);
           font-weight: 600;
           letter-spacing: 0.03em;
@@ -124,8 +152,18 @@ export default function AboutPage() {
           padding: 6rem 0;
         }
 
+        @media (max-width: 576px) {
+          .cta-center {
+            padding: 3.5rem 0;
+          }
+
+          .cta-center :global(.btn) {
+            width: 100%;
+          }
+        }
+
         .cta-center h2 {
-          font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+          font-size: clamp(1.5rem, 3.2vw, 2.4rem);
           color: var(--color-white);
           margin-bottom: 14px;
         }
@@ -136,7 +174,7 @@ export default function AboutPage() {
           max-width: 520px;
           margin-left: auto;
           margin-right: auto;
-          font-size: 1.05rem;
+          font-size: clamp(0.95rem, 2vw, 1.05rem);
         }
       `}</style>
 

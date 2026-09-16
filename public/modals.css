@@ -354,22 +354,22 @@
 /* Responsive */
 @media (max-width: 576px) {
     .beacoet-modal {
-        height: 100%;
-        max-height: 100vh;
-        border-radius: 0;
-        transform: translateY(100%);
-    }
-    
-    .beacoet-modal-backdrop.is-open .beacoet-modal {
-        transform: translateY(0);
+        max-width: calc(100% - 24px);
+        margin: 0 auto;
+        max-height: 85vh;
+        border-radius: var(--border-radius-lg, 12px);
     }
     
     .beacoet-modal-header {
-        border-radius: 0;
+        padding: 18px 16px 12px;
+    }
+
+    .beacoet-modal-body {
+        padding: 16px;
     }
     
     .beacoet-modal-footer {
-        border-radius: 0;
+        padding: 12px 16px 16px;
         flex-direction: column;
     }
     

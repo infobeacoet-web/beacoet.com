@@ -38,12 +38,24 @@ export default function HomePage() {
           position: relative;
         }
 
+        @media (max-width: 768px) {
+          .hero {
+            padding: 4.5rem 0 3.5rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .hero {
+            padding: 3.5rem 0 3rem;
+          }
+        }
+
         .hero-badge {
           margin-bottom: 28px;
         }
 
         .hero-title {
-          font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+          font-size: clamp(1.85rem, 5.5vw, 4.4rem);
           font-weight: 700;
           line-height: 1.12;
           max-width: 920px;
@@ -55,7 +67,7 @@ export default function HomePage() {
         }
 
         .hero-subheading {
-          font-size: clamp(1.1rem, 2vw, 1.3rem);
+          font-size: clamp(1rem, 2vw, 1.3rem);
           color: var(--color-medium-grey);
           max-width: 740px;
           margin: 0 auto 40px;
@@ -69,6 +81,18 @@ export default function HomePage() {
           justify-content: center;
           gap: 18px;
           flex-wrap: wrap;
+        }
+
+        @media (max-width: 576px) {
+          .cta-group {
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+          }
+
+          .cta-group :global(.btn) {
+            width: 100%;
+          }
         }
 
         /* Philosophy Grid */
@@ -88,6 +112,8 @@ export default function HomePage() {
         @media (max-width: 576px) {
           .philosophy-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 2.2rem;
           }
         }
 
@@ -99,6 +125,12 @@ export default function HomePage() {
           text-align: left;
           transition: all var(--transition-normal);
           position: relative;
+        }
+
+        @media (max-width: 576px) {
+          .philosophy-card {
+            padding: 22px 18px;
+          }
         }
 
         .philosophy-card:hover {
@@ -138,7 +170,7 @@ export default function HomePage() {
 
         .problem-statement {
           font-family: var(--font-family-display);
-          font-size: clamp(2rem, 3.8vw, 3.2rem);
+          font-size: clamp(1.6rem, 3.8vw, 3.2rem);
           line-height: 1.25;
           font-weight: 700;
           margin-bottom: 2rem;
@@ -154,14 +186,14 @@ export default function HomePage() {
         }
 
         .problem-body {
-          font-size: 1.2rem;
+          font-size: clamp(1.05rem, 2vw, 1.2rem);
           color: var(--color-medium-grey);
           line-height: 1.7;
           margin-bottom: 2rem;
         }
 
         .problem-resolution {
-          font-size: 1.25rem;
+          font-size: clamp(1rem, 2vw, 1.25rem);
           color: var(--color-light-grey);
           font-weight: 500;
           padding: 20px 32px;
@@ -169,6 +201,15 @@ export default function HomePage() {
           border: 1px solid rgba(212, 175, 55, 0.2);
           border-radius: var(--border-radius-md);
           display: inline-block;
+          max-width: 100%;
+        }
+
+        @media (max-width: 576px) {
+          .problem-resolution {
+            display: block;
+            width: 100%;
+            padding: 16px 18px;
+          }
         }
 
         /* Teaser Box */
@@ -184,14 +225,20 @@ export default function HomePage() {
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
+        @media (max-width: 576px) {
+          .teaser-wrapper {
+            padding: 3rem 1.25rem;
+          }
+        }
+
         .teaser-title {
-          font-size: clamp(2rem, 3.6vw, 3rem);
+          font-size: clamp(1.6rem, 3.6vw, 3rem);
           margin-bottom: 16px;
           color: var(--color-white);
         }
 
         .teaser-subtext {
-          font-size: 1.15rem;
+          font-size: clamp(1rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 580px;
           margin: 0 auto 32px;
@@ -201,6 +248,7 @@ export default function HomePage() {
         .coming-soon-pill {
           display: inline-flex;
           align-items: center;
+          justify-content: center;
           gap: 10px;
           padding: 10px 24px;
           background: rgba(10, 10, 10, 0.8);
@@ -208,9 +256,16 @@ export default function HomePage() {
           border-radius: 40px;
           color: var(--color-gold);
           font-weight: 600;
-          font-size: 0.9rem;
-          letter-spacing: 0.1em;
+          font-size: clamp(0.78rem, 2vw, 0.9rem);
+          letter-spacing: 0.08em;
           text-transform: uppercase;
+          max-width: 100%;
+        }
+
+        @media (max-width: 360px) {
+          .coming-soon-pill {
+            padding: 8px 16px;
+          }
         }
 
         .coming-soon-dot {
@@ -220,6 +275,7 @@ export default function HomePage() {
           background-color: var(--color-gold);
           box-shadow: 0 0 10px var(--color-gold);
           animation: pulse 2.4s infinite ease-in-out;
+          flex-shrink: 0;
         }
 
         @keyframes pulse {
@@ -239,9 +295,15 @@ export default function HomePage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .final-teaser {
+            padding: 3.5rem 0;
+          }
+        }
+
         .final-title {
           font-family: var(--font-family-display);
-          font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+          font-size: clamp(1.5rem, 3.2vw, 2.6rem);
           max-width: 640px;
           margin: 0 auto 16px;
           line-height: 1.3;

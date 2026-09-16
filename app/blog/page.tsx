@@ -81,15 +81,21 @@ export default function BlogPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .blog-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .blog-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 16px;
         }
 
         .blog-hero p {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 640px;
           margin: 0 auto;
@@ -104,16 +110,36 @@ export default function BlogPage() {
           margin-bottom: 3.5rem;
         }
 
+        @media (max-width: 576px) {
+          .category-nav {
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            margin-bottom: 2rem;
+            gap: 8px;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .category-nav::-webkit-scrollbar {
+            display: none;
+          }
+        }
+
         .category-btn {
           background: var(--color-card-bg);
           border: 1px solid rgba(255, 255, 255, 0.1);
           color: var(--color-light-grey);
           padding: 8px 18px;
+          min-height: 40px;
           border-radius: 20px;
           font-size: 0.88rem;
           font-weight: 500;
           cursor: pointer;
           transition: all var(--transition-fast);
+          white-space: nowrap;
+          touch-action: manipulation;
         }
 
         .category-btn:hover,
@@ -138,6 +164,7 @@ export default function BlogPage() {
         @media (max-width: 640px) {
           .articles-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
           }
         }
 
@@ -145,6 +172,12 @@ export default function BlogPage() {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+        }
+
+        @media (max-width: 576px) {
+          .article-card {
+            padding: 20px 16px;
+          }
         }
 
         .article-meta {

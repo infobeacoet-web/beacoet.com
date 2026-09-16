@@ -16,6 +16,12 @@ export default function Footer() {
           position: relative;
         }
 
+        @media (max-width: 576px) {
+          footer {
+            padding: 3.5rem 0 2rem;
+          }
+        }
+
         .footer-top {
           display: flex;
           justify-content: space-between;
@@ -28,7 +34,7 @@ export default function Footer() {
           .footer-top {
             flex-direction: column;
             align-items: flex-start;
-            gap: 2.5rem;
+            gap: 2rem;
             padding-bottom: 2.5rem;
           }
         }
@@ -39,7 +45,7 @@ export default function Footer() {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 20px;
+          gap: 16px;
         }
 
         .footer-logo {
@@ -96,20 +102,24 @@ export default function Footer() {
           display: flex;
           align-items: center;
           gap: 12px;
+          flex-wrap: wrap;
         }
 
         .social-links a {
           color: var(--color-medium-grey);
-          font-size: 0.95rem;
+          font-size: 1rem;
           transition: all var(--transition-fast);
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 38px;
-          height: 38px;
+          width: 44px;
+          height: 44px;
+          min-width: 44px;
+          min-height: 44px;
           border-radius: 50%;
           background: rgba(255, 255, 255, 0.04);
           border: 1px solid rgba(255, 255, 255, 0.08);
+          touch-action: manipulation;
         }
 
         .social-links a:hover {
@@ -128,6 +138,8 @@ export default function Footer() {
           border-top: 1px solid rgba(255, 255, 255, 0.06);
           font-size: 0.85rem;
           color: #666666;
+          flex-wrap: wrap;
+          gap: 12px;
         }
       `}</style>
 

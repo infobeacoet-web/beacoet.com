@@ -55,8 +55,20 @@ export default function WhyPage() {
           text-align: center;
         }
 
+        @media (max-width: 768px) {
+          .why-hero {
+            padding: 4.5rem 0 3.5rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .why-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .why-hero h1 {
-          font-size: clamp(2.5rem, 5vw, 4rem);
+          font-size: clamp(1.8rem, 5vw, 4rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 24px;
@@ -64,7 +76,7 @@ export default function WhyPage() {
         }
 
         .why-hero p {
-          font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+          font-size: clamp(1rem, 2.2vw, 1.35rem);
           color: var(--color-medium-grey);
           max-width: 760px;
           margin: 0 auto;
@@ -88,6 +100,8 @@ export default function WhyPage() {
         @media (max-width: 576px) {
           .loop-grid {
             grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 2rem;
           }
         }
 
@@ -98,6 +112,12 @@ export default function WhyPage() {
           padding: 32px 24px;
           text-align: left;
           transition: all var(--transition-normal);
+        }
+
+        @media (max-width: 576px) {
+          .loop-card {
+            padding: 22px 18px;
+          }
         }
 
         .loop-card:hover {
@@ -114,8 +134,6 @@ export default function WhyPage() {
           align-items: center;
           gap: 8px;
         }
-
-
 
         .loop-card p {
           font-size: 0.95rem;
@@ -143,7 +161,8 @@ export default function WhyPage() {
         @media (max-width: 768px) {
           .direction-track {
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
+            margin-top: 2.2rem;
           }
         }
 
@@ -155,6 +174,13 @@ export default function WhyPage() {
           padding: 24px 16px;
           text-align: center;
           transition: border-color var(--transition-fast);
+          width: 100%;
+        }
+
+        @media (max-width: 576px) {
+          .direction-node {
+            padding: 16px 14px;
+          }
         }
 
         .direction-node:hover {
@@ -185,6 +211,7 @@ export default function WhyPage() {
         @media (max-width: 768px) {
           .direction-arrow {
             transform: rotate(90deg);
+            margin: 4px 0;
           }
         }
 
@@ -199,6 +226,8 @@ export default function WhyPage() {
         @media (max-width: 992px) {
           .pillars-grid {
             grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 2.2rem;
           }
         }
 
@@ -209,6 +238,12 @@ export default function WhyPage() {
           padding: 36px 28px;
           text-align: left;
           transition: all var(--transition-normal);
+        }
+
+        @media (max-width: 576px) {
+          .pillar-card {
+            padding: 24px 18px;
+          }
         }
 
         .pillar-card:hover {
@@ -236,14 +271,24 @@ export default function WhyPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .why-cta {
+            padding: 3.5rem 0;
+          }
+
+          .why-cta :global(.btn) {
+            width: 100%;
+          }
+        }
+
         .why-cta h2 {
-          font-size: clamp(1.8rem, 3vw, 2.5rem);
+          font-size: clamp(1.5rem, 3vw, 2.5rem);
           margin-bottom: 16px;
           color: var(--color-white);
         }
 
         .why-cta p {
-          font-size: 1.1rem;
+          font-size: clamp(0.98rem, 2vw, 1.1rem);
           color: var(--color-medium-grey);
           max-width: 540px;
           margin: 0 auto 32px;

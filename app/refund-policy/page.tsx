@@ -13,6 +13,12 @@ export default function RefundPolicyPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .legal-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .legal-badge {
           display: inline-block;
           padding: 6px 16px;
@@ -26,14 +32,14 @@ export default function RefundPolicyPage() {
         }
 
         .legal-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 16px;
         }
 
         .legal-hero p {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 640px;
           margin: 0 auto;
@@ -46,7 +52,7 @@ export default function RefundPolicyPage() {
         }
 
         .legal-body h2 {
-          font-size: 1.8rem;
+          font-size: clamp(1.4rem, 3vw, 1.8rem);
           color: var(--color-white);
           margin: 2.5rem 0 1rem;
         }
@@ -56,11 +62,13 @@ export default function RefundPolicyPage() {
           color: var(--color-light-grey);
           line-height: 1.7;
           margin-bottom: 1.2rem;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
 
         .legal-body ul {
           list-style: disc;
-          padding-left: 1.8rem;
+          padding-left: 1.5rem;
           margin-bottom: 1.5rem;
         }
 
@@ -69,6 +77,8 @@ export default function RefundPolicyPage() {
           color: var(--color-light-grey);
           margin-bottom: 0.5rem;
           line-height: 1.6;
+          overflow-wrap: anywhere;
+          word-break: break-word;
         }
       `}</style>
 

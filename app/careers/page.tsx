@@ -27,15 +27,21 @@ export default function CareersPage() {
           text-align: center;
         }
 
+        @media (max-width: 576px) {
+          .careers-hero {
+            padding: 3.5rem 0 2.5rem;
+          }
+        }
+
         .careers-hero h1 {
-          font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+          font-size: clamp(1.8rem, 4.5vw, 3.8rem);
           font-weight: 700;
           color: var(--color-white);
           margin-bottom: 18px;
         }
 
         .careers-hero p {
-          font-size: 1.15rem;
+          font-size: clamp(0.98rem, 2vw, 1.15rem);
           color: var(--color-medium-grey);
           max-width: 680px;
           margin: 0 auto;
@@ -51,6 +57,7 @@ export default function CareersPage() {
         @media (max-width: 768px) {
           .grid-3 {
             grid-template-columns: 1fr;
+            gap: 16px;
           }
         }
 
@@ -65,15 +72,24 @@ export default function CareersPage() {
           box-shadow: var(--shadow-card);
         }
 
+        @media (max-width: 576px) {
+          .contact-box {
+            padding: 24px 18px;
+          }
+        }
+
         .email-link {
           display: inline-block;
-          font-size: 1.4rem;
+          font-size: clamp(1.1rem, 4.5vw, 1.4rem);
           font-weight: 700;
           color: var(--color-gold);
           margin: 16px 0 24px;
           text-decoration: none;
           font-family: var(--font-family-display);
           transition: color var(--transition-fast);
+          overflow-wrap: anywhere;
+          word-break: break-word;
+          max-width: 100%;
         }
 
         .email-link:hover {

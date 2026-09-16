@@ -181,23 +181,27 @@ export default function Header() {
         /* Mobile Toggle Button - Hidden on desktop */
         .mobile-toggle {
           display: none;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.08);
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 8px;
           cursor: pointer;
-          width: 38px;
-          height: 38px;
+          width: 44px;
+          height: 44px;
+          min-width: 44px;
+          min-height: 44px;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           gap: 5px;
-          padding: 8px;
+          padding: 10px;
           transition: background-color var(--transition-fast), border-color var(--transition-fast);
+          touch-action: manipulation;
         }
 
-        .mobile-toggle:hover {
-          background: rgba(255, 255, 255, 0.06);
-          border-color: rgba(255, 255, 255, 0.14);
+        .mobile-toggle:hover,
+        .mobile-toggle:active {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: rgba(212, 175, 55, 0.3);
         }
 
         .mobile-toggle span {
@@ -226,6 +230,17 @@ export default function Header() {
           display: none;
         }
 
+        @keyframes menuSlideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-8px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         /* Responsive Breakpoint */
         @media (max-width: 992px) {
           .site-header {
@@ -250,8 +265,11 @@ export default function Header() {
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 20px 24px 28px;
+            padding: 16px 20px 24px;
             box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+            animation: menuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            max-height: calc(100vh - 68px);
+            overflow-y: auto;
           }
 
           .mobile-nav-list {
@@ -260,7 +278,7 @@ export default function Header() {
             padding: 0;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
           }
 
           .mobile-nav-item {
@@ -274,13 +292,17 @@ export default function Header() {
             font-weight: 500;
             color: #a3a3a3;
             text-decoration: none;
-            display: block;
+            display: flex;
+            align-items: center;
+            min-height: 48px;
             padding: 12px 16px;
             border-radius: 8px;
             transition: all 0.2s ease;
+            touch-action: manipulation;
           }
 
-          .mobile-nav-link:hover {
+          .mobile-nav-link:hover,
+          .mobile-nav-link:active {
             color: var(--color-white);
             background: rgba(255, 255, 255, 0.04);
           }
